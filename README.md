@@ -3,7 +3,7 @@
 Not all Linux distributions which support apparmor come with profiles for Firefox or Thunderbird. I copied the profiles from Ubuntu's packages and modified them slightly to make them work for my environment. You're welcome to make use of them as well.
 
 ## Firefox-ESR
-The firefox-esr profile is for Debian 10/11. Run `sudo touch /etc/apparmor.d/local/usr.bin.firefox-esr` first, then copy `usr.bin.firefox-esr` from this repository to `/etc/apparmor.d/` and activate the profile.
+The firefox-esr profile is for Debian 10/11. Run `sudo touch /etc/apparmor.d/local/usr.bin.firefox-esr` first, then copy `usr.bin.firefox-esr` to `/etc/apparmor.d/` and activate the profile.
 
 ## Firefox
 The firefox profile was tested with Manjaro Linux. I've added support for KeePassXC plugin, Yubikeys and widevine video plugin.
