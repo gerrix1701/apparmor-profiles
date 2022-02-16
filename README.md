@@ -7,7 +7,7 @@ The *firefox-esr* profile is for Debian 10/11. Run `sudo touch /etc/apparmor.d/l
 
 ## Firefox
 The *firefox* profile was tested with Manjaro Linux. I've added support for KeePassXC extension, Yubikeys and widevine video plugin.
-Copy `firefox` to `/etc/apparmor.d/abstractions/ubuntu-browsers.d/` and `usr.bin.firefox-esr` to `/etc/apparmor.d/`. Also run `sudo touch /etc/apparmor.d/local/usr.bin.firefox`, then activate the profile.
+Copy `firefox` to `/etc/apparmor.d/abstractions/ubuntu-browsers.d/` and `usr.bin.firefox` to `/etc/apparmor.d/`. Also run `sudo touch /etc/apparmor.d/local/usr.bin.firefox`, then activate the profile.
 
 ## Thunderbird
 The *thunderbird* profile was tested with Manjaro Linux. Run `sudo touch /etc/apparmor.d/local/usr.bin.thunderbird` and copy `usr.bin.thunderbird` to `/etc/apparmor.d/` before activating the profile.
