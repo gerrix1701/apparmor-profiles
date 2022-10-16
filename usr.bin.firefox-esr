@@ -73,7 +73,12 @@ profile firefox /usr/lib/firefox-esr/firefox-esr{,*[^s][^h]} {
   /etc/udev/udev.conf r,
   # Doesn't seem to be required, but noisy. Maybe allow 'r' for 'b*' if needed.
   # Possibly move to an abstraction if anything else needs it.
-  deny /run/udev/data/** r,
+  ## commented because of Yubikey
+  #deny /run/udev/data/** r,
+  ##added because of Yubikey
+  /sys/devices/pci*/** rw,
+  /dev/hidraw* rw,
+  /run/udev/data/** r,
   # let the shell know we launched something
   dbus (send)
      bus=session
@@ -173,6 +178,7 @@ profile firefox /usr/lib/firefox-esr/firefox-esr{,*[^s][^h]} {
   owner @{HOME}/.{firefox,mozilla}/**/*.{db,parentlock,sqlite}* k,
   owner @{HOME}/.{firefox,mozilla}/plugins/** rm,
   owner @{HOME}/.{firefox,mozilla}/**/plugins/** rm,
+  owner @{HOME}/.{firefox,mozilla}/firefox/*/gmp-widevinecdm/*/libwidevinecdm.so m,
   owner @{HOME}/.gnome2/firefox* rwk,
   owner @{HOME}/.cache/mozilla/{,firefox/} rw,
   owner @{HOME}/.cache/mozilla/firefox/** rw,
