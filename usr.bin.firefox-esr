@@ -74,7 +74,7 @@ profile firefox /usr/lib/firefox-esr/firefox-esr{,*[^s][^h]} {
   # Doesn't seem to be required, but noisy. Maybe allow 'r' for 'b*' if needed.
   # Possibly move to an abstraction if anything else needs it.
   ## commented because of Yubikey
-  #deny /run/udev/data/** r,
+  deny /run/udev/data/** r,
   ##added because of Yubikey
   /sys/devices/pci*/** rw,
   /dev/hidraw* rw,
